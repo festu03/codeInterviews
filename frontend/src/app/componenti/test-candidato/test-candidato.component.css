@@ -1,0 +1,53 @@
+.testContenitore {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.test {
+    display: flex;
+    justify-content: space-between;
+}
+
+.domanda,
+.risposta {
+    width: 48%;
+}
+
+.rispostaEditor {
+    height: 100%;
+}
+
+.pulsanti {
+    display: flex;
+    justify-content: flex-end;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+    background: white;
+    color: #000866;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #000866;
+    color: white;
+}
+
+button:disabled {
+    background: #80808012;
+    color: #00096640;
+    cursor: context-menu;
+}

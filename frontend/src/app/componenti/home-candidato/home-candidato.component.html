@@ -1,0 +1,33 @@
+<div class="contenitore poppins-regular">
+    <div class="candidato">
+        <p>Candidato: {{nomeCandidato}}</p>
+    </div>
+    <h3 class="test">Test {{titoloTest}}</h3>
+
+    <div class="domanda">
+        <table mat-table [dataSource]="domandeTabella">
+
+            <ng-container matColumnDef="titolo">
+                <th class="titolo" mat-header-cell *matHeaderCellDef>Titolo</th>
+                <td class="titolo" mat-cell *matCellDef="let domanda">{{domanda.title}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="tipologia">
+                <th class="tipologia" mat-header-cell *matHeaderCellDef>Tipologia</th>
+                <td class="tipologia" mat-cell *matCellDef="let domanda">{{domanda.typology}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="difficolta">
+                <th class="difficolta" mat-header-cell *matHeaderCellDef>Difficoltà</th>
+                <td class="difficolta" mat-cell *matCellDef="let domanda">{{domanda.difficulty}}</td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="colonne"></tr>
+            <tr mat-row *matRowDef="let row; columns: colonne"></tr>
+
+        </table>
+    </div>
+    <div class="inizia">
+        <button class="link" (click)="iniziaTest()">Inizia test</button>
+    </div>
+</div>

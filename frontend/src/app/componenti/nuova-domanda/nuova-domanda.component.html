@@ -1,0 +1,40 @@
+<div class="nuovaDomanda">
+
+    <header>
+        <h3>Nuova domanda</h3>
+    </header>
+
+    <div>
+        <form class="nuovaDomandaForm" [formGroup]="nuovaDomandaForm" (ngSubmit)="onSubmit()">
+            <div class="titolo">
+                <p>Titolo</p>
+                <input type="text" name="titolo" formControlName="title">
+            </div>
+
+            <div class="tipologia">
+                <p>Tipologia</p>
+                <input type="text" name="tipologia" formControlName="typology">
+            </div>
+
+            <div class="difficolta">
+                <p>Difficoltà</p>
+                <select name="difficolta" formControlName="difficulty">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <div class="descrizione">
+                <p>Descrizione</p>
+                <div #editor></div>
+            </div>
+
+            <div class="salva">
+                <button class="poppins-regular" type="submit" [disabled]="!nuovaDomandaForm.valid">Salva</button>
+            </div>
+        </form>
+    </div>
+</div>

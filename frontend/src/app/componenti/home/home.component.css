@@ -1,0 +1,96 @@
+.container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+header {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px 0px 20px;
+    height: 10%;
+    border-bottom: 1px solid;
+    box-shadow: 1px 1px 5px;
+}
+
+img {
+    width: 150px;
+    cursor: pointer;
+}
+
+.logout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    padding: 2px;
+    color: #000866;
+    border-radius: 10px;
+}
+
+.rigaUtente {
+    margin-top: 1%;
+    display: flex;
+    height: 86%;
+}
+
+.colonnaUnoUtente {
+    width: 15%;
+    height: max-content;
+    margin: 0% 1% 0% 2%;
+    border: 1px solid rgba(0, 0, 0, 0.388);
+    border-radius: 5px;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.388);
+    margin: 0;
+    height: 50px;
+    font-size: 18px;
+    color: #000866;
+    padding: 5px;
+    text-decoration: none;
+}
+
+#nd{
+    border: none;
+}
+
+.link:hover,
+.logout:hover {
+    background-color: #f0f0f0;
+}
+
+.attivo {
+    background-color: #f0f0f0;
+}
+
+.colonnaDueUtente {
+    width: 79%;
+    margin: 0% 2% 0% 1%;
+    border: 1px solid rgba(0, 0, 0, 0.388);
+    border-radius: 5px;
+    padding: 10px;
+    min-height: -webkit-fill-available;
+    height: max-content;
+}
+
+.rigaCandidato {
+    margin-top: 1%;
+    height: 86%;
+}
+
+.colonnaUnoCandidato {
+    border: 1px solid rgba(0, 0, 0, 0.388);
+    border-radius: 5px;
+    margin: 10px;
+    min-height: -webkit-fill-available;
+    padding: 10px;
+    height: max-content;
+}

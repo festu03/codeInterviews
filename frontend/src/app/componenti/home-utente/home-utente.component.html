@@ -1,0 +1,31 @@
+<div class="contenutoHomeUtente">
+
+        <header>
+                <h3>Lista test</h3>
+        </header>
+
+        <div class="listaTest">
+                <table class="poppins-regular" mat-table [dataSource]="testCandidatoTabella">
+
+                        <ng-container matColumnDef="titolo">
+                                <th class="cella" mat-header-cell *matHeaderCellDef> Titolo </th>
+                                <td class="test" mat-cell *matCellDef="let singoloTest" (click)="test(singoloTest.id)">
+                                        {{singoloTest.title}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="email">
+                                <th class="cella" mat-header-cell *matHeaderCellDef> Email </th>
+                                <td class="test" mat-cell *matCellDef="let singoloTest" (click)="test(singoloTest.id)">
+                                        {{singoloTest.email}} </td>
+                        </ng-container>
+
+                        <tr mat-header-row *matHeaderRowDef="colonne"></tr>
+                        <tr mat-row *matRowDef="let row; columns: colonne"></tr>
+
+                </table>
+
+                <mat-paginator [pageSizeOptions]="[10]" [length]="totDomande" [pageIndex]="paginaAttuale"
+                        [pageSize]="elementiPagina" showFirstLastButtons (page)="cambioPagina($event)">
+                </mat-paginator>
+        </div>
+</div>

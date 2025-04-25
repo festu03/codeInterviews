@@ -1,0 +1,34 @@
+<div class="contenutoDomanda">
+
+    <header>
+        <h3>Lista domande</h3>
+    </header>
+
+    <div class="listaDomande">
+        <table mat-table [dataSource]="domandeTabella">
+
+            <ng-container matColumnDef="titolo">
+                <th class="titolo" mat-header-cell *matHeaderCellDef> Titolo </th>
+                <td class="titolo" mat-cell *matCellDef="let domanda"> {{domanda.title}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="tipologia">
+                <th class="tipologia" mat-header-cell *matHeaderCellDef> Tipologia </th>
+                <td class="tipologia" mat-cell *matCellDef="let domanda"> {{domanda.typology}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="difficolta">
+                <th class="difficolta" mat-header-cell *matHeaderCellDef> Difficoltà </th>
+                <td class="difficolta" mat-cell *matCellDef="let domanda"> {{domanda.difficulty}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="colonne"></tr>
+            <tr mat-row *matRowDef="let row; columns: colonne"></tr>
+
+        </table>
+        <mat-paginator [pageSizeOptions]="[10]" [length]="totDomande" [pageIndex]="paginaAttuale"
+            [pageSize]="elementiPagina" showFirstLastButtons (page)="cambioPagina($event)">
+        </mat-paginator>
+    </div>
+
+</div>

@@ -1,0 +1,113 @@
+.contenitore {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.candidato {
+    display: flex;
+    align-items: center;
+}
+
+h3 {
+    font-size: 25px;
+    font-weight: bolder;
+    margin: 0px;
+    color: #000866;
+    width: 50%;
+}
+
+table {
+    border: 2px solid !important;
+    border-collapse: collapse !important;
+    margin-top: 10px !important;
+    table-layout: fixed !important;
+}
+
+th,
+td {
+    border: 2px solid !important;
+    padding: 0px 5px 0px 5px !important;
+}
+
+/* th */
+.mat-mdc-header-row {
+    height: 10px !important;
+}
+
+/* contenuto cella th */
+.mat-mdc-header-cell {
+    font-family: "Poppins", sans-serif !important;
+    font-weight: bolder !important;
+    font-style: normal !important;
+    font-size: 17px !important;
+}
+
+/* td e contenuto*/
+.mat-mdc-row {
+    height: 10px !important;
+    font-family: "Poppins", sans-serif !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+    font-size: 15px !important;
+}
+
+.titolo {
+    text-align: revert-layer !important;
+}
+
+.tipologia {
+    text-align: revert-layer !important;
+    width: 15% !important;
+}
+
+.difficolta {
+    text-align: revert-layer !important;
+    width: 12% !important;
+}
+
+.pulsanti {
+    display: flex;
+    justify-content: space-between;
+}
+
+.link {
+    text-align: -webkit-center;
+    cursor: pointer;
+    border: 1px solid;
+    color: #000866;
+    width: 15%;
+    height: 25px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.link:hover {
+    background: #000866;
+    color: white;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    height: 26px;
+    border: 1px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+    background: white;
+    color: #000866;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #000866;
+    color: white;
+}
+
+button:disabled {
+    background: #80808012;
+    color: #00096640;
+    cursor: context-menu;
+}

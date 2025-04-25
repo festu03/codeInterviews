@@ -1,0 +1,25 @@
+<div class="testContenitore ">
+
+    <div class="test">
+        <div class="domanda">
+            <div>
+                <h1>{{titolo}}</h1>
+            </div>
+            <div>
+                <markdown [data]="descrizione"></markdown>
+            </div>
+        </div>
+
+        <div class="risposta">
+            <ngx-monaco-editor class="rispostaEditor" [options]="editorOptions"
+                [(ngModel)]="risposta"></ngx-monaco-editor>
+        </div>
+    </div>
+
+    <div class="pulsanti">
+        <button *ngIf="!ultimaDomanda()" [disabled]="!risposta" (click)="avanti()"
+            class="poppins-regular">Avanti</button>
+        <button *ngIf="ultimaDomanda()" [disabled]="!risposta" (click)="concludi()"
+            class="poppins-regular">Concludi</button>
+    </div>
+</div>

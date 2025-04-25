@@ -1,0 +1,53 @@
+<div class="contenutoCandidato poppins-regular">
+    <header>
+        <h3 class="nuovoTest">Nuovo Test</h3>
+    </header>
+    <form class="testForm" #emailCandidato="ngForm" (ngSubmit)="creaTest(emailCandidato)">
+
+        <div class="emailCandidato">
+            <p>Inserisci email del candidato</p>
+            <input class="email poppins-regular" type="email" name="email" ngModel required email>
+        </div>
+        <div class="recapTest">
+            <p>Recap del test</p>
+            <p class="titoloTest">Titolo: {{titoloTest}}</p>
+
+            <table class="poppins-regular" mat-table [dataSource]="domandeFinalliTabella">
+
+                <ng-container matColumnDef="ordine">
+                    <th class="ordine" mat-header-cell *matHeaderCellDef>No.</th>
+                    <td class="ordine" mat-cell *matCellDef="let singolaDomanda">{{singolaDomanda.ordine}}</td>
+                </ng-container>
+
+                <ng-container matColumnDef="titolo">
+                    <th class="cella" mat-header-cell *matHeaderCellDef> Titolo </th>
+                    <td class="cella" mat-cell *matCellDef="let singolaDomanda"> {{singolaDomanda.titolo}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="tipologia">
+                    <th class="tipologia" mat-header-cell *matHeaderCellDef> Tipologia </th>
+                    <td class="tipologia" mat-cell *matCellDef="let singolaDomanda"> {{singolaDomanda.tipologia}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="difficolta">
+                    <th class="difficolta" mat-header-cell *matHeaderCellDef> Difficoltà </th>
+                    <td class="difficolta" mat-cell *matCellDef="let singolaDomanda"> {{singolaDomanda.difficolta}}
+                    </td>
+                </ng-container>
+
+
+                <tr mat-header-row *matHeaderRowDef="colonne"></tr>
+                <tr mat-row *matRowDef="let row; columns: colonne"></tr>
+
+            </table>
+
+
+
+
+        </div>
+        <div class="creaTest">
+            <button class="poppins-regular" type="submit" [disabled]="!emailCandidato.valid">Crea test</button>
+        </div>
+    </form>
+
+</div>

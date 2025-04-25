@@ -1,0 +1,85 @@
+<div class="contenutoTestUtente">
+    <header>
+        <h3 class="nuovoTest">Nuovo Test</h3>
+    </header>
+
+    <div class="titolo">
+        <p class="selezione">Inserisci un titolo per il test</p>
+        <input class="inpTitolo poppins-regular" type="text" name="titolo" [(ngModel)]="titoloTest" required>
+    </div>
+
+    <div class="listaDomande poppins-regular">
+
+        <p class="selezione">Seleziona le domande da aggiungere al test</p>
+
+        <table class="poppins-regular" mat-table [dataSource]="domandeTabella">
+
+            <ng-container matColumnDef="lista">
+                <th class="lista" mat-header-cell *matHeaderCellDef> </th>
+                <td class="lista" mat-cell *matCellDef="let domanda"><input class="inpCheckbox" type="checkbox"
+                        [(ngModel)]="domanda.selezionata" (change)="selezionaDomanda(domanda)"></td>
+            </ng-container>
+
+            <ng-container matColumnDef="titolo">
+                <th class="cella" mat-header-cell *matHeaderCellDef> Titolo </th>
+                <td class="cella" mat-cell *matCellDef="let domanda"> {{domanda.titolo}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="tipologia">
+                <th class="tipologia" mat-header-cell *matHeaderCellDef> Tipologia </th>
+                <td class="tipologia" mat-cell *matCellDef="let domanda"> {{domanda.tipologia}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="difficolta">
+                <th class="difficolta" mat-header-cell *matHeaderCellDef> Difficoltà </th>
+                <td class="difficolta" mat-cell *matCellDef="let domanda"> {{domanda.difficolta}} </td>
+            </ng-container>
+
+
+            <tr mat-header-row *matHeaderRowDef="colonne"></tr>
+            <tr mat-row *matRowDef="let row; columns: colonne"></tr>
+
+        </table>
+        <mat-paginator [pageSizeOptions]="[5]" [length]="totDomande" [pageIndex]="paginaAttuale" [pageSize]="elementiPagina"
+            (page)="cambioPagina($event)" showFirstLastButtons>
+        </mat-paginator>
+
+    </div>
+
+    <div class="ordineDomande">
+        <table mat-table [dataSource]="domandeTabellaSelezionate" cdkDropList (cdkDropListDropped)="drop($event)">
+
+            <ng-container matColumnDef="lista">
+                <th class="ordine" mat-header-cell *matHeaderCellDef>No. </th>
+                <td class="ordine" mat-cell *matCellDef="let domandaSelezionata, let i = index"><input
+                        class="inpCheckbox" type="checkbox" [(ngModel)]="domandaSelezionata.selezionata"
+                        (change)="selezionaDomanda(domandaSelezionata)"></td>
+            </ng-container>
+
+            <ng-container matColumnDef="titolo">
+                <th class="cella" mat-header-cell *matHeaderCellDef> Titolo </th>
+                <td class="cella" mat-cell *matCellDef="let domandaSelezionata"> {{domandaSelezionata.titolo}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="tipologia">
+                <th class="tipologia" mat-header-cell *matHeaderCellDef> Tipologia </th>
+                <td class="tipologia" mat-cell *matCellDef="let domandaSelezionata"> {{domandaSelezionata.tipologia}}
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="difficolta">
+                <th class="difficolta" mat-header-cell *matHeaderCellDef> Difficoltà </th>
+                <td class="difficolta" mat-cell *matCellDef="let domandaSelezionata"> {{domandaSelezionata.difficolta}}
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="colonne"></tr>
+            <tr mat-row *matRowDef="let row; columns: colonne," cdkDrag></tr>
+        </table>
+    </div>
+
+    <div class="avanti">
+        <button class="poppins-regular" [disabled]="!titoloTest || !domandaSelezionata" type="button"
+            (click)="avanti()">Avanti</button>
+    </div>
+</div>

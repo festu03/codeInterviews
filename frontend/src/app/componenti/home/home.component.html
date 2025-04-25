@@ -1,0 +1,35 @@
+<div class="container poppins-regular">
+    <header>
+        <img routerLink="home-utente" *ngIf="accessoUtente()" src={{logo}} title="Home">
+        <a class="logout" (click)="disconnessione()" *ngIf="accessoUtente()"><mat-icon title="Logout">logout</mat-icon>
+        </a>
+
+        <img routerLink="home-candidato" *ngIf="accessoCandidato()" src={{logo}} title="Home">
+
+    </header>
+
+    <div class="rigaUtente" *ngIf="accessoUtente()">
+        <div class="colonnaUnoUtente">
+            <div class="utente">
+                <a class="link" routerLink="home-utente" routerLinkActive="attivo">Test</a>
+                <a class="link" routerLink="nuovo-test" routerLinkActive="attivo">Nuovo test</a>
+                <a class="link" routerLink="domanda" routerLinkActive="attivo">Domande</a>
+                <a class="link" id="nd" routerLink="nuova-domanda" routerLinkActive="attivo">Nuova domanda</a>
+            </div>
+        </div>
+
+        <div class="colonnaDueUtente">
+            <div class="componenteUtente">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+
+    <div class="rigaCandidato" *ngIf="accessoCandidato()">
+        <div class="colonnaUnoCandidato">
+            <div class="componenteCandidato">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>

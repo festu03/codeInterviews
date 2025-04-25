@@ -1,0 +1,44 @@
+.contenutoLogoutCandidato {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 150px;
+}
+
+.email {
+    display: flex;
+    justify-content: space-around;
+    padding: 0px 20px 0px 20px;
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: bolder;
+    margin: 0px;
+    color: #000866;
+}
+
+.logout {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px 20px 0px 20px;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    height: 26px;
+    border: 1px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+    background: white;
+    color: #000866;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #000866;
+    color: white;
+}

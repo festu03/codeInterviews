@@ -1,0 +1,61 @@
+.logoBenvenuto {
+    padding: 45px;
+    gap: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 300px;
+    height: 100px;
+}
+
+.container[_ngcontent-ng-c1070233341] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenutoBenvenuto {
+    border-radius: 5px;
+    border-color: #cccccc;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testo {
+    font-size: 22px;
+    cursor: context-menu;
+}
+
+.login {
+    box-shadow: 0 6px 3px -3px rgba(0, 0, 0, 0.6);
+    display: flex;
+    font-size: 16px;
+    flex-direction: column;
+    align-content: stretch;
+    justify-content: space-around;
+    border: 1px solid;
+    text-align: center;
+    border-radius: 20px;
+    width: 280px;
+}
+
+p {
+    cursor: pointer;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+p:hover {
+    background-color: #f0f0f0;
+}

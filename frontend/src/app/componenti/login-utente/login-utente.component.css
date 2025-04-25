@@ -1,0 +1,84 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.contenuto {
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 30px;
+    border-color: #cccccc;
+    box-shadow: 1px 1px 5px;
+}
+
+.containerForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login {
+    font-size: 20px;
+    margin: 0;
+    cursor: context-menu;
+}
+
+.inpPass {
+    position: relative;
+}
+
+.mostra {
+    position: absolute;
+    top: 35%;
+    right: 15px;
+    cursor: pointer;
+    border: none;
+    background: #80808000;
+}
+
+input {
+    width: 250px;
+    height: 25px;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 3px;
+    background: #80808012;
+    border: 1px solid #ccc
+}
+
+input.ng-invalid.ng-touched {
+    border-bottom: 2px solid red;
+}
+
+.accedi {
+    display: grid;
+    padding: 10px;
+    height: 25px;
+}
+
+.buttonAccedi {
+    font-size: 15px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    padding: 5px;
+    background: white;
+    color: #000866;
+}
+
+.buttonAccedi:hover {
+    background: #000866;
+    color: white;
+}
+
+.buttonAccedi:disabled {
+    background: #80808012;
+    color: #00096640;
+    cursor: context-menu;
+}
+
+span {
+    font-size: 15px;
+    cursor: context-menu;
+}

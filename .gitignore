@@ -1,0 +1,11 @@
+##IDE
+backend/.idea/
+
+##Build output
+target/
+dist/
+
+##System files
+.DS_Store
+Thumbs.db
+backend/HELP.md

@@ -1,0 +1,24 @@
+package com.example.starter.controller;
+
+import com.example.starter.DTO.AdminQuestionDTO;
+import com.example.starter.DTO.TestDTO;
+import com.example.starter.service.TestService;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/admin/tests")
+public class AdminTestController {
+    private final TestService testService;
+
+    public AdminTestController(TestService testService) {
+        this.testService = testService;
+    }
+
+    @GetMapping
+    public ResponseEntity<Page<TestDTO>> getTests(Pageable pageable) {
+        return ResponseEntity.ok(testService.getTests(pageable));
+    }
+}

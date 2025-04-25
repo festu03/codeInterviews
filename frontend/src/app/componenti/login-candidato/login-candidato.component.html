@@ -1,0 +1,20 @@
+<div class="container poppins-regular">
+    <div class="contenuto">
+        <div class="containerFormCandidato">
+            <h4 class="login">Login</h4>
+            
+            <form #loginFormCandidato="ngForm" (ngSubmit)="onSubmit(loginFormCandidato)">
+                <div>
+                    <input class="poppins-regular" type="text" name="token" placeholder="Token" ngModel required>
+                </div>
+
+                <div class="accedi">
+                    <button class="poppins-regular" type="submit"  [disabled]="!loginFormCandidato.valid">Accedi</button>
+                </div>
+            </form>
+
+            <span class="poppins-regular" *ngIf="!isTokenValid">Token non valido</span>
+
+        </div>
+    </div>
+</div>

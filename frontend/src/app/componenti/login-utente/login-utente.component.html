@@ -1,0 +1,28 @@
+<div class="container poppins-regular">
+    <div class="contenuto">
+        <div class="containerForm">
+            <h4 class="login">Login</h4>
+            
+            <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+                <div class="inpEmail">
+                    <input class="poppins-regular" type="text" name="username" placeholder="Username" ngModel required>
+                </div>
+
+                <div class="inpPass">
+                    <input class="poppins-regular" [type]="!controlloVisibilita ? 'password' : 'text'" name="password" placeholder="Password"
+                        ngModel required>
+                    <button class="mostra poppins-regular" type="button" (click)="controlloVisibilita = !controlloVisibilita" >
+                        {{controlloVisibilita ? 'Nascondi' :'Mostra'}}</button>
+                </div>
+
+                <div class="accedi">
+                    <button class="buttonAccedi poppins-regular" type="submit" [disabled]="!loginForm.valid">Accedi</button>
+                </div>
+            </form>
+
+            <span class="poppins-regular" *ngIf="!isCredenzialiValide">Username e password errate</span>
+            <p *ngIf="isMessaggioVisible">{{messaggio | json}}</p>
+
+        </div>
+    </div>
+</div>

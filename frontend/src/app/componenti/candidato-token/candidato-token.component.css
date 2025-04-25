@@ -1,0 +1,54 @@
+.contenutoToken{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nuovoTest {
+    font-size: 30px;
+    font-weight: bolder;
+    margin: 0px;
+    color: #000866;
+}
+
+.candidato{
+    display: flex;
+    flex-direction: column;
+}
+
+p{
+    font-size: 17px;
+    margin: 0;
+}
+
+.emailCandidato{
+    color: #000866;
+}
+
+.tokenCandidato{
+    color: #d20a11;
+}
+
+.chiudi {
+    display: flex;
+    justify-content: flex-end
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    height: 26px;
+    border: 1px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+    background: white;
+    color: #000866;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #000866;
+    color: white;
+}
