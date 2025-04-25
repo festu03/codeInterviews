@@ -2,7 +2,7 @@
 
 ## 🇮🇹 Descrizione del progetto
 
-**Code Interviews** è una piattaforma web sviluppata per facilitare il processo di assunzione presso SMC. Il sistema consente agli amministratori e agli HR di creare test personalizzati per i candidati, composti da una serie di domande, e di monitorare i risultati in maniera efficiente.
+**Code Interviews** è una piattaforma web sviluppata per facilitare il processo di assunzione presso [SMC](https://www.smc.it/homepage). Il sistema consente agli amministratori e agli HR di creare test personalizzati per i candidati, composti da una serie di domande, e di monitorare i risultati in maniera efficiente.
 
 ### 🔧 Tecnologie utilizzate
 
@@ -23,7 +23,7 @@
 
 ## 🇬🇧 Project Description
 
-**Code Interviews** is a web platform designed to streamline the hiring process at SMC. It allows administrators and HR personnel to create customized tests for candidates and track their performance efficiently.
+**Code Interviews** is a web platform designed to streamline the hiring process at [SMC](https://www.smc.it/homepage). It allows administrators and HR personnel to create customized tests for candidates and track their performance efficiently.
 
 ### 🔧 Technologies Used
 
