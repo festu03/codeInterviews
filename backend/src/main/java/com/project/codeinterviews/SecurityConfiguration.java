@@ -51,8 +51,7 @@ public class SecurityConfiguration {
                 .securityMatcher("/admin/**")
                 .cors(cors -> cors.configurationSource(corsConfigurationSource())) // Abilita CORS
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("/admin/questions/**").hasRole("ADMIN")
-                        .requestMatchers("/admin/**").hasAnyRole("ADMIN", "HR")
+                        .anyRequest().hasAnyRole("ADMIN", "HR")
                 )
                 .httpBasic(httpBasic -> {
                         }
